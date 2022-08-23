@@ -30,6 +30,8 @@ body{
     justify-content: space-between; */
     }
 
+
+    
 .logo {
     grid-area: logo;
     width: 100%;
@@ -64,6 +66,7 @@ body{
     background-color: #00000000;
     outline: none;
     border-radius: 30px;
+    transition: all 0.6s ease;
 }
 
 .btn-buscar {
@@ -112,6 +115,7 @@ body{
     color: white;
     padding-inline: 10px;
     align-items: center;
+    transition: all 1s;
 }
 
 .cuenta a:hover {
@@ -126,8 +130,13 @@ body{
 
 .carrito{
     height: 100%;
+    transition: all 1s;
 }
 
+
+.carrito:hover{
+    transform: scale(120%);
+}
 
 .menu {
     width: 40%;
@@ -147,6 +156,7 @@ body{
     font-size: 16px;
 text-decoration: none;
 color: white;
+transition: all 1s;
 }
 
 .menu_item.active a {
@@ -219,6 +229,21 @@ header nav ul {
     display: flex;
     align-content: stretch;
 }
+
+.fondo-efecto img{
+    width: 100%;
+    animation-name: fondo;
+    animation-duration: 5s;
+    animation-iteration-count: infinite ;
+}
+
+@keyframes fondo{
+    0%{filter: opacity(90%)}
+    25%{filter: opacity(70%);}
+    50%{filter:opacity(30%)}
+    100%{ filter: opacity(0%);}
+}
+
 
 .info {
     grid-area: info;
