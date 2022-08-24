@@ -333,14 +333,21 @@ header nav ul {
         "imagen4 imagen5 imagen6 imagen6 info4"; 
     }
   
+    .container{
+        height: 100%;
+        max-height:200vh;
+
+    }
+
     .container-img{
         width: 80%;
-        height: 100vh;
+        height: 500vh;
         margin: auto;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 250px;
+        grid-template-rows: 100%;
         grid-gap: 10px;
+        align-content: stretch;
     }
 
     .container-img .box-img figure{
@@ -359,7 +366,7 @@ header nav ul {
         grid-row-start: span 2;
     }
 
-    .container-img .box-img:nth-child(4){
+    .container-img .box-img:nth-child(3){
         grid-row-start: span 2;
     }
 
@@ -374,6 +381,20 @@ header nav ul {
 
    .container-img {
     height: 200px;
+   }
+
+   .box-img{
+    overflow: hidden;
+   }
+
+   .box-img a img{
+    transition: all 2s;
+   }
+   
+
+   .box-img a:hover img{
+    transform: scale(105%);
+    overflow: hidden;
    }
 
     .imagen1 {
@@ -944,15 +965,17 @@ hr{
  .story{
     margin: 20px;
     font-size: 18px;
+    color: white
 }
 
 .story a{
     text-decoration: none;
     color: grey;
+    transition: 1s;
 }
 
 .story a:hover{
-    color:black;
+    color:white;
     font-weight: 600;
 }
 

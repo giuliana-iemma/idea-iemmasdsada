@@ -12,24 +12,47 @@
 
 <header>
     <!-- Encabezado desktop -->
-
-    <div class="header1">     
     
-        <form class="busqueda" action="">
-            <input type="search" name="" id="buscar" value="Buscar">
-        </form>
+    <div class="header1">    
+            
+        <div  class="buscar">
+            <input type="text" placeholder="Buscar" required>
+    
+            <div class="btn-buscar">
+                <img src="./../assets/icons/search.png" alt="">      <!-- por qué no queda dentro del grid? -->   
+            </div>
+        </div>
         
         <div class="logo">
             <img  src="./../assets/logo/logo blanco.png" alt="logo">
         </div>
 
         <div class="cuenta">
-            
                 <a href="#">Iniciar sesión</a>
                 <a href="#">Crear cuenta</a>
-                <a class="cart" href=""><img src="./../assets/icons/carritoblanco.png" alt="Carrito" ></a>
+                <a  href="#"><img  class="carrito" src="./../assets/icons/carritoblanco.png" alt="Carrito"></a>
         </div>
 
+        <!-- Menú de navegación -->
+        <nav>
+        
+            <form class="busqueda mobile" action="">
+                <input type="search" name="" id="buscar" value="Buscar">
+            </form>
+
+            <div class="cuenta mobile">
+                <a href="#">Iniciar sesión</a>
+                <a href="#">Crear cuenta</a>
+            </div>
+
+            <ul class="menu">
+                <li class="menu_item active"><a href="./index.html">Inicio</a></li>
+                <li class="menu_item"><a href="./pages/ropa de danza.html"> </span> Productos</a></li>
+                <li class="menu_item"><a href="./pages/talle.html">  Talles</a></li>
+                <li class="menu_item"><a href="./pages/contacto.html">  Contacto</a></li>
+            </ul>
+        </nav>
+        
     </div>
 
 <!-- Encabezado mobile -->
@@ -47,26 +70,6 @@
 
 </div>       
 
-   <!-- Menú de navegación -->
-   <nav>
-        
-    <form class="busqueda mobile" action="">
-        <input type="search" name="" id="buscar" value="Buscar">
-    </form>
-
-    <div class="cuenta mobile">
-        
-        <a href="#">Iniciar sesión</a>
-        <a href="#">Crear cuenta</a>
-     </div>
-
-    <ul class="menu">
-        <li class="menu_item "><a href="./../index.html">Inicio</a></li>
-        <li class="menu_item active"><a href="./../pages/ropa de danza.html"> </span> Productos</a></li>
-        <li class="menu_item"><a href="./../pages/talle.html">  Talles</a></li>
-        <li class="menu_item"><a href="./../pages/contacto.html">  Contacto</a></li>
-    </ul>
-</nav>
 </header>
 </header>
 
@@ -116,7 +119,7 @@
        
         <div class="box-img">
             <a href="#">
-               <figure> <img src="./../assets/imagenes/2.jpg" alt="producto1"></figure>
+               <figure> <img src="./../assets/imagenes/5.jpg" alt="producto1"></figure>
             </a>
         </div>
 
@@ -219,7 +222,7 @@
        <h3> Seguinos </h3> 
 
        <div class="redes">
-           <a href="#"><img src="./../assets/icons/instagram.jpg" alt=""></a>
+           <a href="#"><img src="./../assets/icons/instagram.png" alt=""></a>
            <a href="#"><img src="./../assets/icons/facebook.png" alt=""></a>
            <a href="#"> <img  src="./../assets/icons/spotify.png" alt=""></a>
           
