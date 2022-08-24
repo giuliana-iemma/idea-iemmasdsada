@@ -341,7 +341,7 @@ header nav ul {
 
     .container-img{
         width: 80%;
-        height: 500vh;
+        height: 100%;
         margin: auto;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
