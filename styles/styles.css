@@ -10,17 +10,15 @@
 body{
     background-image: url(./../assets/imagenes/empty-dark-grey-wall-with-texture-good-for-background.jpg);
 }
-.header1 {
+header {
     width: 100%;
-    height: 50vh;
     padding-inline: 30px;
-    display: grid;
-    grid-template-columns: 1fr, 2fr, 1fr;
-    grid-template-rows: 3fr 1fr;
-    grid-template-areas: 
-    "search logo logo cuenta"
-    "nav nav nav nav";
-    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-block:20px;
+    gap: 20px;
+}
+
 /*     border-bottom: 2px solid black;
  */    /* display: flex;
     flex-flow: row nowrap;
@@ -28,13 +26,13 @@ body{
     justify-items: center;
     background-image: black;
     justify-content: space-between; */
-    }
+    
 
 
     
 .logo {
     grid-area: logo;
-    width: 100%;
+    width: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,11 +47,12 @@ body{
 .buscar{ /* por qué no queda dentro del grid */
     grid-area: search;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     align-content: center;
     padding: 5px;
     align-items: center;
+    width: 40%;
 }
 
 .buscar input{
@@ -100,17 +99,18 @@ body{
 
 .cuenta {
     grid-area: cuenta;
-    width: auto;
+    width: 30%;
     display: flex;
     flex-direction: row;
     align-items: center; /* ver c+omo centrar verticalmente */
     justify-content: right;
-
+    float: right;
 }
 
 .cuenta a  {
     text-decoration: none;
-    width: 30%;
+    width: 28%;
+    display: flex;
     font-size: 14px;
     color: white;
     padding-inline: 10px;
@@ -128,6 +128,11 @@ body{
     justify-self: center;
 }  
 
+.carrito.a{
+    display: flex;
+    justify-content: right;
+    width: 10%;
+}
 .carrito{
     height: 100%;
     transition: all 1s;
@@ -138,9 +143,8 @@ body{
     transform: scale(120%);
 }
 
-.menu {
+nav ul {
     width: 40%;
-    margin-bottom: 30px;
     display: flex;
     list-style: none ;
     background-color: rgba(0, 0, 0, 0.178) ;
@@ -152,6 +156,9 @@ body{
     
 }
 
+nav ul li img{
+    display: none;
+}
 .menu_item a {
     font-size: 16px;
 text-decoration: none;
@@ -370,7 +377,21 @@ header nav ul {
     .container-img .box-img:nth-child(3){
         grid-row-start: span 2;
     }
+    
+    .checkbtn{
+        color: white;
+        float: right;
+        line-height: 80px;
+        margin-right: 40px;
+        cursor: pointer;
+        display: none;
+        position:relative
+    }
 
+    #check{
+        display: block;
+        
+    }
     @media screen and (max-width: 380){
         .container-img{
             width: 90%;
@@ -701,62 +722,101 @@ height: 30px;
 
 /* mobile */
 
-@media screen and (min-width: 380px){
+@media screen and (min-width: 768px){
 
 }
 
-@media screen and (max-width: 380px){
- .header1{
-    display: none;
- }
+@media screen and (max-width: 768px){
 
-.header2 {
+header {
     width: 100%;
     display: flex;
     background-color: black;
     padding-block: 20px;
     padding-inline: 10px;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 20px;
+    margin: 0px;
 }
+
+.cuenta {
+    display: none;
+}
+
+
+.buscar {
+    display: none;
+}
+
 .logo img{
-    width: 50%;
-}
+    width: 100%;
+ }
+
+
 .menu_bar{
     display: flex;
 }
 
-.cuenta a img{
-    width: 24px;
-}  
+
 
 .icon-burger img {
     width: 40px;
 }
+.checkbtn{
+    display: flex;
+    z-index: 1;
+    margin: 20px;
+    align-items: center;
+}
+
+.burger{
+    width: 60px;
+}
 
 nav{
-    display: none; /* cambiar a flex para ver el menu desplegado */
-    flex-direction: column;
     justify-content: left;
-    width: 50%;
-    height: 100%;
+    width: 100%;
+    height: 100%;    
+}
+
+nav ul{
     background-color: black;
-}
-
-
-.menu_item a{
-    
-    color: white;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+     right: 110%;
+  width: 100%;
+    height: 100%;
     text-align: center;
-    justify-self:center ;
-    font-size: 12px;
-
+    transition: all .5s;
+    gap: 5%;
 }
 
-.menu_item.active a{
-    color: white;
-    font-weight: 400;
+nav ul li img{
+    margin-top:200px;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    display: flex;
+    justify-content: center;
+
+}
+nav ul li a {
+    font-size: 20px;
+}
+
+li a:hover, li a.active {
+    background-color: none;
+    font-weight: 700;
+}
+
+#check:checked  #menu{
+right: 0%;
+}
+    
 }
 
 .busqueda.mobile{
@@ -770,13 +830,6 @@ margin: 10px;
     margin-left: 10px;
     }
 
-.cuenta{
-    display: flex;
-    font-size: 10px;
-    width: 100%;
-    margin-top: 10px;
-    justify-content: center;
-}
 
 .home_grid{
  display: none
@@ -958,7 +1011,7 @@ hr{
     height: 40px;
     justify-self: center;
 }
-}
+
 
    
  /* Producto 1 */
