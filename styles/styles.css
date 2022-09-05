@@ -832,7 +832,7 @@ right: 0%;
 
 .nws-email{
     width: 100px;
-}
+} /* por qué no modifica el width? */
 }
 
 .busqueda.mobile{
