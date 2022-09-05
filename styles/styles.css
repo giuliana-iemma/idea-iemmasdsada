@@ -89,9 +89,7 @@ header {
     text-align: center;
    }
 
-.menu_bar{
-    display: none;
-}
+
 
 .buscar:hover input{
     width: 240px;
@@ -142,7 +140,9 @@ header {
 .carrito:hover{
     transform: scale(120%);
 }
-
+.fondo-nav{
+    display: none;
+}
 nav ul {
     width: 40%;
     display: flex;
@@ -188,11 +188,7 @@ nav{
     align-items: center;
 }
 
-header nav ul {
-    height: 100%;
-    align-items: center;
-    
-}
+
 .busqueda.mobile{
     display: none;
 }
@@ -389,7 +385,7 @@ header nav ul {
     }
 
     #check{
-        display: block;
+        display: none;
         
     }
     @media screen and (max-width: 380){
@@ -604,7 +600,8 @@ hr {
 .box img {
     width: 40px;
 }
-  
+
+
 
 .footer_grid {
     display: grid;
@@ -616,6 +613,8 @@ hr {
     grid-template-areas: 
     "informacion seguinos newsletter";
     margin-top: 20px;
+    z-index: 0;
+    
 }
 
 .informacion{
@@ -732,18 +731,15 @@ header {
     width: 100%;
     display: flex;
     background-color: black;
-    padding-block: 20px;
-    padding-inline: 10px;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+    justify-content: space-between;
     margin: 0px;
+    position: fixed;
+    z-index: 1;
 }
 
 .cuenta {
     display: none;
 }
-
 
 .buscar {
     display: none;
@@ -753,31 +749,41 @@ header {
     width: 100%;
  }
 
-
-.menu_bar{
-    display: flex;
-}
-
-
-
 .icon-burger img {
     width: 40px;
 }
 .checkbtn{
     display: flex;
     z-index: 1;
-    margin: 20px;
-    align-items: center;
 }
 
 .burger{
     width: 60px;
 }
 
+.logo{
+    display: flex;
+    justify-self: right;
+}
+
+.fondo-nav{
+    display: flex;
+    object-fit: contain;
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+    padding-top: 50px;
+}
+
+
 nav{
+    display: flex;
     justify-content: left;
     width: 100%;
-    height: 100%;    
+    margin-top: 0px; 
+    padding-top: 0px; 
+    height: 100vh;
+ 
 }
 
 nav ul{
@@ -785,16 +791,16 @@ nav ul{
     position: fixed;
     display: flex;
     flex-direction: column;
+    align-content: top;
     right: 110%;
     width: 100%;
     height: 100%;
-    text-align: center;
     transition: all .5s;
     gap: 5%;
+    z-index: 0.5;
 }
 
 nav ul li img{
-    margin-top:200px;
     display: flex;
     justify-content: center;
 }
@@ -802,8 +808,8 @@ nav ul li img{
 nav ul li {
     display: flex;
     justify-content: center;
-
 }
+
 nav ul li a {
     font-size: 20px;
 }
@@ -817,6 +823,16 @@ li a:hover, li a.active {
 right: 0%;
 }
     
+.footer_grid{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: 100%;
+}
+
+.nws-email{
+    width: 100px;
+}
 }
 
 .busqueda.mobile{
@@ -956,12 +972,8 @@ hr{
     font-size: 12px;
 }
 
-.footer_grid{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    padding-top: 20px;
-}
+
+
 
 .informacion {
     display: flex;
@@ -977,6 +989,8 @@ hr{
     text-align: center;
     justify-content: center;
 }
+
+
 
 .redes{
     display: flex;
