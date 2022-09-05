@@ -10,6 +10,8 @@
 body{
     background-image: url(./../assets/imagenes/empty-dark-grey-wall-with-texture-good-for-background.jpg);
 }
+
+/* Header */
 header {
     width: 100%;
     padding-inline: 30px;
@@ -18,17 +20,6 @@ header {
     margin-block:20px;
     gap: 20px;
 }
-
-/*     border-bottom: 2px solid black;
- */    /* display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-items: center;
-    background-image: black;
-    justify-content: space-between; */
-    
-
-
     
 .logo {
     grid-area: logo;
@@ -43,8 +34,7 @@ header {
     
 } /* ver cómo centrar */
 
-
-.buscar{ /* por qué no queda dentro del grid */
+.buscar{ 
     grid-area: search;
     display: flex;
     justify-content: left;
@@ -81,15 +71,13 @@ header {
     cursor: pointer;
    }
 
-   .btn-buscar img{
+.btn-buscar img{
     align-self: center;
 
     width: 30px;
     height: 30px;
     text-align: center;
    }
-
-
 
 .buscar:hover input{
     width: 240px;
@@ -135,7 +123,6 @@ header {
     height: 100%;
     transition: all 1s;
 }
-
 
 .carrito:hover{
     transform: scale(120%);
@@ -188,13 +175,13 @@ nav{
     align-items: center;
 }
 
-
 .busqueda.mobile{
     display: none;
 }
 .cuenta.mobile{
     display: none;
 }
+
 .home_grid{
     display: grid;
     height: 120vh;
@@ -210,7 +197,6 @@ nav{
     "info fondo"
     "info fondo"
     "info fondo";
-
 }
 
 .fondo.mobile {
@@ -291,9 +277,7 @@ nav{
     align-content: center;
     padding-top: 20px;
 }
-.cuerpo{
-    height: 75vh;
-}
+
 .info_boton a {
     text-decoration: none;
     color: black;
@@ -309,71 +293,7 @@ nav{
     background-color: wheat;    
 }
 
- /* .productos_grid {
-    display: grid;
-    height: 100vh;
-    width: 98%;
-    margin: 20px;
-    gap: 10px;
-    grid-template-columns: repeat (5, 1fr);
-    grid-template-rows: repeat (4, 1fr);
-    grid-template-areas: 
-    "imagen1 imagen2 imagen3 boton1 info1  "
-    "imagen4 imagen2 imagen3 boton2 info2"
-    "imagen4 logo2 imagen3 boton3 info3"
-    "imagen4 imagen5 imagen6 imagen6 info4"; }*/
-
-    .productos_grid {
-        display: grid;
-        height: 100vh;
-        width: 100%;
-        margin: 20px;
-        gap: 10px;
-        grid-template-columns: repeat (5, 1fr);
-        grid-template-rows: repeat (4, 1fr);
-        grid-template-areas: 
-        "imagen1 imagen2 imagen3 boton1 info1  "
-        "imagen4 imagen2 imagen3 boton2 info2"
-        "imagen4 logo2 imagen3 boton3 info3"
-        "imagen4 imagen5 imagen6 imagen6 info4"; 
-    }
-  
-    .container{
-        height: 100%;
-
-    }
-
-    .container-img{
-        width: 80%;
-        height: 100%;
-        margin: auto;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 100%;
-        grid-gap: 10px;
-        align-content: stretch;
-    }
-
-    .container-img .box-img figure{
-        width: 100%;
-        height: 100%;
-    }
-
-    .container-img .box-img img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .container-img .box-img:nth-child(1){
-        grid-column-start: span 2;
-        grid-row-start: span 2;
-    }
-
-    .container-img .box-img:nth-child(3){
-        grid-row-start: span 2;
-    }
-    
+/* mobile */
     .checkbtn{
         color: white;
         float: right;
@@ -388,6 +308,7 @@ nav{
         display: none;
         
     }
+
     @media screen and (max-width: 380){
         .container-img{
             width: 90%;
@@ -395,26 +316,9 @@ nav{
             grid-gap: 5px ;
             grid-template-rows: 200px
     }
-}
+    }
 
-   .container-img {
-    height: 200px;
-   }
-
-   .box-img{
-    overflow: hidden;
-   }
-
-   .box-img a img{
-    transition: all 2s;
-   }
    
-
-   .box-img a:hover img{
-    transform: scale(105%);
-    overflow: hidden;
-   }
-
     .imagen1 {
     grid-area: imagen1;
     background-image: url(./../assets/imagenes/imagen1.webp);
@@ -502,6 +406,8 @@ nav{
     background-repeat: no-repeat;
     overflow: hidden;
   } */
+
+  /* Menu opciones de productos */
 .botones.mobile{
     display: none;
 }
@@ -557,6 +463,8 @@ transition: all 1s;
     width: 110%;
 }
 
+/* Información */
+
 .info-bottom{
     display: flex;
     width: 100%;
@@ -601,7 +509,7 @@ hr {
     width: 40px;
 }
 
-
+/* Footer */
 
 .footer_grid {
     display: grid;
@@ -722,10 +630,11 @@ height: 30px;
 /* mobile */
 
 @media screen and (min-width: 768px){
-
+   
 }
 
 @media screen and (max-width: 768px){
+
 
 header {
     width: 100%;
@@ -766,14 +675,25 @@ header {
     justify-self: right;
 }
 
+.fondo-nav-container{
+  overflow: hidden;
+  height: 100vh;
+  background-image: url(./../assets/imagenes/1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  background-position: 50%;
+}
 .fondo-nav{
     display: flex;
-    object-fit: contain;
+    justify-content: stretch;
     width: 100%;
-    object-fit: contain;
+    align-items: stretch;
     object-position: center;
-    padding-top: 50px;
-}
+    overflow: hidden;
+    object-fit: cover;
+    margin-top:10%;
+} 
 
 
 nav{
@@ -823,17 +743,11 @@ li a:hover, li a.active {
 right: 0%;
 }
     
-.footer_grid{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    height: 100%;
-}
 
 .nws-email{
     width: 100px;
 } /* por qué no modifica el width? */
-}
+
 
 .busqueda.mobile{
 width: 100%;
@@ -974,7 +888,12 @@ hr{
 
 
 
-
+.footer_grid{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    
+}
 .informacion {
     display: flex;
     flex-direction: column;
@@ -1026,7 +945,7 @@ hr{
     justify-self: center;
 }
 
-
+}
    
  /* Producto 1 */
 
@@ -1427,6 +1346,99 @@ gap: 10px;
 
 /* Productos */
 
+
+ /* .productos_grid {
+    display: grid;
+    height: 100vh;
+    width: 98%;
+    margin: 20px;
+    gap: 10px;
+    grid-template-columns: repeat (5, 1fr);
+    grid-template-rows: repeat (4, 1fr);
+    grid-template-areas: 
+    "imagen1 imagen2 imagen3 boton1 info1  "
+    "imagen4 imagen2 imagen3 boton2 info2"
+    "imagen4 logo2 imagen3 boton3 info3"
+    "imagen4 imagen5 imagen6 imagen6 info4"; }*/
+ 
+    .productos_grid {
+        display: grid;
+        height: 100vh;
+        width: 100%;
+        margin: 20px;
+        gap: 10px;
+        grid-template-columns: repeat (5, 1fr);
+        grid-template-rows: repeat (4, 1fr);
+        grid-template-areas: 
+        "imagen1 imagen2 imagen3 boton1 info1  "
+        "imagen4 imagen2 imagen3 boton2 info2"
+        "imagen4 logo2 imagen3 boton3 info3"
+        "imagen4 imagen5 imagen6 imagen6 info4"; 
+    }
+  
+    .container{
+        object-fit: fill;
+        margin-top: 20px;
+    }
+
+    .container-img{
+        width: 80%;
+        height: 100%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+    }
+
+    .box-img{
+        overflow: hidden;
+        position: relative;
+        display: inline-block;
+        text-align: center;
+       }
+    
+       .box-img a img{
+        transition: all 2s;
+       }
+       
+    
+       .box-img a:hover img{
+        transform: scale(105%);
+        overflow: hidden;
+       }
+    
+
+    .container-img .box-img figure{
+        width: 100%;
+        height: 100%;
+    }
+
+    .container-img .box-img img {
+        width: 100%;
+        height: 100%;
+
+    }
+
+    .datos-prod{
+        color: white;
+        text-decoration: none;
+        position: absolute;
+        padding: 10px;
+        top:85%;
+        font-size: 150%;
+        background-color: rgba(0, 0, 0, 0.367);
+        width: 100%;
+    }
+
+    .container-img .box-img:nth-child(1){
+        grid-column-start: span 2;
+        grid-row-start: span 2;
+    }
+
+    .container-img .box-img:nth-child(3){
+        grid-row-start: span 2;
+    }
+    
 .productos{
 height: 100%;
  display: flex;
@@ -1438,6 +1450,10 @@ height: 100%;
  padding: 20px;
  margin-block:100px;
 }
+
+/* .footer_grid{
+    display: none;
+} */
 
 .card img{
     width: 100%;
@@ -1453,6 +1469,16 @@ height: 100%;
 .ropa-de-danza{
     height: 100%
 }
+
+@media screen and (max-width: 768px){
+    .datos-prod{
+        font-size: 80%;
+        top: 70%;
+    }
+
+
+}
+
 
 /* Contacto */
 

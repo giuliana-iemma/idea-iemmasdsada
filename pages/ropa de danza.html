@@ -8,93 +8,57 @@
     <link rel="stylesheet" href="./../styles/styles.css">
 </head>
 
-<!-- Barra -->
+<!-- Encabezado -->
 
 <header>
-    <!-- Encabezado desktop -->
-    
-    <div class="header1">    
-            
-        <div  class="buscar">
-            <input type="text" placeholder="Buscar" required>
-    
-            <div class="btn-buscar">
-                <img src="./../assets/icons/search.png" alt="">      <!-- por qué no queda dentro del grid? -->   
-            </div>
-        </div>
-        
-        <div class="logo">
-            <img  src="./../assets/logo/logo blanco.png" alt="logo">
-        </div>
+    <label for="check" class="checkbtn"> <img class="burger" src="./../assets/icons/burger.png" alt=""></label>
 
-        <div class="cuenta">
-                <a href="#">Iniciar sesión</a>
-                <a href="#">Crear cuenta</a>
-                <a  href="#"><img  class="carrito" src="./../assets/icons/carritoblanco.png" alt="Carrito"></a>
-        </div>
+   <div  class="buscar">
+       <input type="text" placeholder="Buscar" required>
 
-        <!-- Menú de navegación -->
-        <nav>
-        
-            <form class="busqueda mobile" action="">
-                <input type="search" name="" id="buscar" value="Buscar">
-            </form>
+       <div class="btn-buscar">
+           <img src="./../assets/icons/search.png" alt="">      <!-- por qué no queda dentro del grid? -->   
+       </div>
+   </div>
+   
+   <div class="logo">
+       <img  src="./../assets/logo/logo blanco.png" alt="logo">
+   </div>
 
-            <div class="cuenta mobile">
-                <a href="#">Iniciar sesión</a>
-                <a href="#">Crear cuenta</a>
-            </div>
-
-            <ul class="menu">
-                <li class="menu_item "><a href="./../index.html">Inicio</a></li>
-                <li class="menu_item active"><a href="./../pages/ropa de danza.html"> </span> Productos</a></li>
-                <li class="menu_item"><a href="./../pages/talle.html">  Talles</a></li>
-                <li class="menu_item"><a href="./../pages/contacto.html">  Contacto</a></li>
-            </ul>
-        </nav>
-        
-    </div>
-
-<!-- Encabezado mobile -->
-
-<div class="header2">
-    <div class="menu_bar"> 
-        <a class="btn-menu" href="#"> <span class="icon-burger"><img src="./../assets/icons/burger.png" alt=""></span> </a>
-    </div>
-
-    <div class="logo">
-        <img  src="./../assets/logo/logo blanco.png" alt="logo">
-    </div>
-
-    <a class="cart" href=""><img src="./../assets/icons/carritoblanco.png" alt="Carrito" ></a>
-
-</div>       
-
+   <div class="cuenta">
+           <a href="#">Iniciar sesión</a>
+           <a href="#">Crear cuenta</a>
+           <a  href="#"><img  class="carrito" src="./../assets/icons/carritoblanco.png" alt="Carrito"></a>
+   </div>
+   
+ 
 </header>
-</header>
+
+<nav>
+
+   <div class="fondo-nav-container">
+            sdfs      
+   </div>
+
+   <input type="checkbox" id="check">
+
+  
+
+   <ul id="menu">
+       <li><img src="./../assets/logo/logo blanco.png" alt=""></li>
+       <li class="menu_item active"><a href="././index.html">Inicio</a></li>
+       <li class="menu_item"><a href="./../pages/ropa de danza.html"> </span> Productos</a></li>
+       <li class="menu_item"><a href="./../pages/talle.html">  Talles</a></li>
+       <li class="menu_item"><a href="./../pages/contacto.html">  Contacto</a></li>
+   </ul>
+
+  
+</nav>
 
 
 <body>
- <!-- <nav>
-        
-    <form class="busqueda mobile" action="">
-        <input type="search" name="" id="buscar" value="Buscar">
-    </form>
 
-    <div class="cuenta mobile">
-        
-        <a href="#">Iniciar sesión</a>
-        <a href="#">Crear cuenta</a>
-     </div>
-
-    <ul class="menu">
-        <li class="menu_item active"><a href="#">Calzas</a></li>
-        <li class="menu_item"><a href="#"> </span> Tops</a></li>
-        <li class="menu_item"><a href="#">Bikers</a></li>
-        <li class="menu_item"><a href="#">Conjuntos</a></li>
-    </ul>
-</nav>  -->
-<section class="cuerpo">
+<section>
     <div class="story">
     <a href="./../index.html"> Inicio </a> /
    <strong> Productos</strong>
@@ -105,12 +69,22 @@
 <section class="container">
     <div class="container-img">
         <div class="box-img">
-            <a href="#">
-               <figure> <img src="./../assets/imagenes/1.jpg" alt="producto1"></figure>
+            <div class="datos-prod">
+                <h5>Producto 1</h5>
+                <h6>$1700</h6>
+            </div>
+            <a href="#">    
+              
+               <figure><img src="./../assets/imagenes/1.jpg" alt="producto1"></figure>
             </a>
+           
         </div>
 
         <div class="box-img">
+            <div class="datos-prod">
+                <h5>Producto 2</h5>
+                <h6>$1700</h6>
+            </div>
             <a href="#">
                <figure> <img src="./../assets/imagenes/2.jpg" alt="producto1"></figure>
             </a>
@@ -118,6 +92,11 @@
 
        
         <div class="box-img">
+
+            <div class="datos-prod">
+                <h5>Producto 3</h5>
+                <h6>$1700</h6>
+            </div>
             <a href="#">
                <figure> <img src="./../assets/imagenes/5.jpg" alt="producto1"></figure>
             </a>
@@ -125,6 +104,10 @@
 
         
         <div class="box-img">
+            <div class="datos-prod">
+                <h5>Producto 4</h5>
+                <h6>$1700</h6>
+            </div>
             <a href="#">
                <figure> <img src="./../assets/imagenes/3.jpg" alt="producto1"></figure>
             </a>
@@ -132,6 +115,10 @@
 
         
         <div class="box-img">
+            <div class="datos-prod">
+                <h5>Producto 5</h5>
+                <h6>$1700</h6>
+            </div>
             <a href="#">
                <figure> <img src="./../assets/imagenes/4.jpg" alt="producto1"></figure>
             </a>
